@@ -13,16 +13,16 @@ sitemap:
   <img class="city-card-image" src="/assets/img/bed.svg" alt="Bed PNG" width="10" height="10">   
 </div>
 
-<script>
+<div class="card mb-4">
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-8" name="table_wrapper">
+            <script>
               var city = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
 
               function successFunction(data) {
                 var allRows = data.split(/\r?\n|\r/);
-                var table = '<div class="card mb-4">';
-                table += '<div class="card-body">';
-                table += '<div class="row">';
-                table += '<div class="col-sm-8">';
-                table += '<table>';
+                var table = '<table>';
                 for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
                   if (singleRow === 0) {
                     table += '<thead>';
@@ -52,8 +52,7 @@ sitemap:
                 } 
                 table += '</tbody>';
                 table += '</table>';
-                table += '</div></div></div></div>'
-                $('body').append(table);
+                $('table_wrapper').append(table);
               }
 
               $.ajax({
@@ -62,6 +61,10 @@ sitemap:
               }).done(successFunction);
 
             </script>
+          </div>
+      </div>
+  </div>
+</div>
   
 
 
