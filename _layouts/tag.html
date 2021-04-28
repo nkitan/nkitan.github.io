@@ -2,7 +2,7 @@
 layout: page
 ---
 {% assign post_exists = false %}
-{% assign project_exists = false %}
+{% assign city_exists = false %}
 
 <h1>Posts</h1>
 <br>
@@ -23,19 +23,19 @@ layout: page
 <h1>Projects</h1>
 <br>
 <div class="card-columns">
-    {% for project in site.data.projects %}
-    {% unless project.listed == false %}
-        {% for tag in project.tags %}
+    {% for city in site.data.cities %}
+    {% unless city.listed == false %}
+        {% for tag in city.tags %}
             {% if tag == page.tag %}
-                {% include post/project_card.html %}
-                {% assign project_exists = true %}
+                {% include post/city_card.html %}
+		{% assign city_exists = true %}
             {% endif %}
         {% endfor %} 
     {% endunless %}
     {% endfor %}
 </div>
-{% if project_exists == false %}
-<p>No projects with this tag.</p>
+{% if city_exists == false %}
+<p>No Cities with this tag.</p>
 {% endif %}
 
 <h1>Tags</h1>

@@ -1,16 +1,16 @@
 <div class="card mb-4">
-    {% if project.img_src %}
-    <img class="card-img-top" src="{{ site.url }}{{ project.img_src }}">
+    {% if city.img_src %}
+    <img class="card-img-top" src="{{ site.url }}{{ city.img_src }}">
     {% endif %}
     <div class="card-body">
       {% for tag in pages.tags %}
         {% include tag_list.html %}
       {% endfor %}
-      <h4><b><a data-toggle="collapse" class="stretched-link" href="#{{ project.id }}" role="button" aria-expanded="false"
-          aria-controls="collapseExample">{{ project.name }}</a></b></h4>
-      <p>{{ project.description_less }}</p>
-      <div class="collapse" id="{{ project.id }}">
-        {{ project.description_more }}
+      <h4><b><a data-toggle="collapse" class="stretched-link" href="#{{ city.id }}" role="button" aria-expanded="false"
+          aria-controls="collapseExample">{{ city.name }}</a></b></h4>
+      <p>{{ city.description_less }}</p>
+      <div class="collapse" id="{{ city.id }}">
+        {{ city.description_more }}
       </div>
     </div>
   </div>
