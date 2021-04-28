@@ -262,6 +262,14 @@
     object-fit: cover
   }
 
+  .city-card-image {
+    border-radius: 0.25rem;
+    width: 25%;
+    height: 25%;
+    filter: brightness(96%);
+    object-fit: none
+  }
+
 /* =Glitch effect, Source: http://codepen.io/bulby97/pen/fcvay *//*************************************************************/
   .glitch {
     position: relative;
