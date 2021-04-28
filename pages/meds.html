@@ -10,11 +10,26 @@ sitemap:
 <div class="col-sm-4">
   <img class="city-card-image" src="/assets/img/med.svg" alt="Med PNG" width="100" height="100">          
 </div>
+
 <div class="card mb-4">
   <div class="card-body">
       <div class="row">
           <div class="col-sm-8">
-            AMD_MEDS
+            <table>
+              {% for row in site.data.amd.meds %}
+                {% if forloop.first %}
+                <tr>
+                  {% for pair in row %}
+                    <th>{{ pair[0] }}</th>
+                  {% endfor %}
+                </tr>
+                {% endif %}
+            
+                {% tablerow pair in row %}
+                  {{ pair[1] }}
+                {% endtablerow %}
+              {% endfor %}
+            </table>
           </div>
       </div>
   </div>

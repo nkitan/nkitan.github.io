@@ -12,3 +12,19 @@
 
   tags: [Resources]
 
+
+- name: Indore
+  id: idr
+  city: idr
+  img_src: /assets/img/Indore.jpg
+  description_less: > 
+    <p>Click Here to Find Resources in Indore.</p> 
+  description_more: > 
+
+    <a href="pages/beds.html?id=idr" target="_self" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Beds</a>
+    <a href="pages/tests.html?id=idr" target="_self" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Testing</a>
+    <a href="pages/meds.html?id=idr" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medical Shops</a>
+
+  tags: [Resources]
+
+
