@@ -1,0 +1,40 @@
+---
+layout: page
+title: Resources
+subtitle: Beds.
+description: CoviGuide resource page – a collection of resources.
+permalink: /beds
+sitemap:
+  priority: 0.9
+---
+   
+<div class="col-sm-4">
+  <img class="city-card-image" src="/assets/img/bed.svg" alt="Bed PNG" width="10" height="10">   
+</div>
+
+<div class="card mb-4">
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-8">
+            <table>
+              {% for row in site.data.{page.category}.beds %}
+                {% if forloop.first %}
+                <tr>
+                  {% for pair in row %}
+                    <th>{{ pair[0] }}</th>
+                  {% endfor %}
+                </tr>
+                {% endif %}
+            
+                {% tablerow pair in row %}
+                  {{ pair[1] }}
+                {% endtablerow %}
+              {% endfor %}
+            </table>
+          </div>
+      </div>
+  </div>
+</div>
+  
+
+
