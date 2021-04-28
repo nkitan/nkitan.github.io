@@ -8,8 +8,9 @@
 
     <a href="pages/beds.html?city=amd" target="_self" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Beds</a>
     <a href="pages/tests.html?city=amd" target="_self" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Testing</a>
-    <a href="pages/meds.html?city=amd" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medical Shops</a>
-
+    <a href="pages/meds.html?city=amd" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medicines</a>
+    <a href="pages/meds.html?city=amd" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Oxygen / Plasma</a>
+    <a href="pages/meds.html?city=amd" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Helplines</a>
   tags: [Resources]
 
 
@@ -23,7 +24,9 @@
 
     <a href="pages/beds.html?city=idr" target="_self" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Beds</a>
     <a href="pages/tests.html?city=idr" target="_self" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Testing</a>
-    <a href="pages/meds.html?city=idr" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medical Shops</a>
+    <a href="pages/meds.html?city=idr" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medicines</a>
+    <a href="pages/oxygen.html?city=idr" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Oxygen / Plasma</a>
+    <a href="pages/helpline.html?city=idr" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Helplines</a>
 
   tags: [Resources]
 
