@@ -1,13 +1,14 @@
 - name: Ahmedabad
   id: amd 
+  city: amd
   img_src: /assets/img/Ahmedabad.jpg
   description_less: > 
     <p>Click Here to Find Resources in Ahmedabad.</p> 
   description_more: > 
 
-    <a href="pages/beds.html" target="_self" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Beds</a>
-    <a href="pages/tests.html" target="_self" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Testing</a>
-    <a href="pages/meds.html" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medical Shops</a>
+    <a href="pages/beds.html?id=amd" target="_self" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Beds</a>
+    <a href="pages/tests.html?id=amd" target="_self" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Testing</a>
+    <a href="pages/meds.html?id=amd" target="_self" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medical Shops</a>
 
   tags: [Resources]
 
