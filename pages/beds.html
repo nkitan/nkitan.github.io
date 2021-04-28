@@ -17,7 +17,7 @@ sitemap:
           <div class="col-sm-8">
             <table>
               
-              {% for row in site.data.{{ page.id }}.beds %}
+              {% for row in site.data.{page.id}.beds %}
                 {% if forloop.first %}
                 <tr>
                   {% for pair in row %}
