@@ -16,21 +16,54 @@ sitemap:
   <div class="card-body">
       <div class="row">
           <div class="col-sm-8">
-            <table>
-              {% for row in site.data.amd.tests %}
-                {% if forloop.first %}
-                <tr>
-                  {% for pair in row %}
-                    <th>{{ pair[0] }}</th>
-                  {% endfor %}
-                </tr>
-                {% endif %}
-            
-                {% tablerow pair in row %}
-                  {{ pair[1] }}
-                {% endtablerow %}
-              {% endfor %}
-            </table>
+            <p id="table_wrapper">
+
+            </p>
+
+            <script>
+              var city = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
+
+              function successFunction(data) {
+                var allRows = data.split(/\r?\n|\r/);
+                var table = '<table>';
+                for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+                  if (singleRow === 0) {
+                    table += '<thead>';
+                    table += '<tr>';
+                  } else {
+                    table += '<tr>';
+                  }
+                  var rowCells = allRows[singleRow].split(',');
+                  for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+                    if (singleRow === 0) {
+                      table += '<th>';
+                      table += rowCells[rowCell];
+                      table += '</th>';
+                    } else {
+                      table += '<td>';
+                      table += rowCells[rowCell];
+                      table += '</td>';
+                    }
+                  }
+                  if (singleRow === 0) {
+                    table += '</tr>';
+                    table += '</thead>';
+                    table += '<tbody>';
+                  } else {
+                    table += '</tr>';
+                  }
+                } 
+                table += '</tbody>';
+                table += '</table>';
+                document.getElementById("table_wrapper").insertAdjacentHTML("afterend",table);
+              }
+
+              $.ajax({
+                url: '/resources/' + city + '/beds.csv',
+                dataType: 'text',
+              }).done(successFunction);
+
+            </script>
           </div>
       </div>
   </div>
