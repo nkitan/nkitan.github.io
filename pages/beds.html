@@ -15,8 +15,11 @@ sitemap:
   <div class="card-body">
       <div class="row">
           <div class="col-sm-8">
-            {{ site.data.id }}
-
+            <script>
+              var qs = new Querystring();
+              var city = qs.get("city");
+              alert(city)
+            </script>
             <table>
               {% for row in site.data.amd.beds %}
                 {% if forloop.first %}
