@@ -7,6 +7,8 @@ permalink: /pages/meds.html
 sitemap:
   priority: 0.9
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 <div class="col-sm-4">
   <img class="city-card-image" src="/assets/img/med.svg" alt="Med PNG" width="100" height="100">          
 </div>
@@ -18,52 +20,53 @@ sitemap:
             <p id="table_wrapper">
 
             </p>
-
-            <script>
-              var city = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
-
-              function successFunction(data) {
-                var allRows = data.split(/\r?\n|\r/);
-                var table = '<table>';
-                for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
-                  if (singleRow === 0) {
-                    table += '<thead>';
-                    table += '<tr>';
-                  } else {
-                    table += '<tr>';
-                  }
-                  var rowCells = allRows[singleRow].split(',');
-                  for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
-                    if (singleRow === 0) {
-                      table += '<th>';
-                      table += rowCells[rowCell];
-                      table += '</th>';
-                    } else {
-                      table += '<td>';
-                      table += rowCells[rowCell];
-                      table += '</td>';
-                    }
-                  }
-                  if (singleRow === 0) {
-                    table += '</tr>';
-                    table += '</thead>';
-                    table += '<tbody>';
-                  } else {
-                    table += '</tr>';
-                  }
-                } 
-                table += '</tbody>';
-                table += '</table>';
-                document.getElementById("table_wrapper").insertAdjacentHTML("afterend",table);
-              }
-
-              $.ajax({
-                url: '/resources/' + city + '/beds.csv',
-                dataType: 'text',
-              }).done(successFunction);
-
-            </script>
           </div>
       </div>
   </div>
 </div>
+
+
+<script>
+  var city = parent.document.URL.substring(parent.document.URL.indexOf('=') + 1, parent.document.URL.length);
+
+  function successFunction(data) {
+    var allRows = data.split(/\r?\n|\r/);
+    var table = '<table>';
+    for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+      if (singleRow === 0) {
+        table += '<thead>';
+        table += '<tr>';
+      } else {
+        table += '<tr>';
+      }
+      var rowCells = allRows[singleRow].split(',');
+      for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+        if (singleRow === 0) {
+          table += '<th>';
+          table += rowCells[rowCell];
+          table += '</th>';
+        } else {
+          table += '<td>';
+          table += rowCells[rowCell];
+          table += '</td>';
+        }
+      }
+      if (singleRow === 0) {
+        table += '</tr>';
+        table += '</thead>';
+        table += '<tbody>';
+      } else {
+        table += '</tr>';
+      }
+    } 
+    table += '</tbody>';
+    table += '</table>';
+    document.getElementById("table_wrapper").insertAdjacentHTML("afterend",table);
+  }
+
+  $.ajax({
+    url: '/resources/' + city + '/beds.csv',
+    dataType: 'text',
+  }).done(successFunction);
+
+</script>
