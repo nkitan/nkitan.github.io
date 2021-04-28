@@ -52,7 +52,7 @@ sitemap:
                 } 
                 table += '</tbody>';
                 table += '</table>';
-                document.getElementById("table_wrapper").innerHTML += table;
+                document.getElementById("table_wrapper").insertAdjacentElement(table);
               }
 
               $.ajax({
