@@ -1,22 +1,26 @@
 ---
 layout: page
-title: Projects
-subtitle: Things I have worked on.
-description: Pudhina Fresh projects page – A minimal yet feature-rich Jekyll theme made for personal websites and blogs.
-permalink: /projects
+title: Cities
+subtitle: City wise Resources.
+description: this page provides resources based on what city you are in.
+permalink: /cities
 sitemap:
   priority: 0.9
 tags: 
 - 
-  name: pudhina fresh theme
+  name: city wise resources
 - 
-  name: jekyll theme 
+  name: city wise
 - 
-  name: jekyll
+  name: resources
+-
+  name: covid-19
+-
+  name: covid-19help
 ---
 
 <div class="card-columns">
-  {% for project in site.data.projects %}
-    {% include post/project_card.html %}
+  {% for city in site.data.cities %}
+    {% include post/city_card.html %}
   {% endfor %}
 </div>

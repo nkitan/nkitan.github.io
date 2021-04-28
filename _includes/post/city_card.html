@@ -3,7 +3,7 @@
     <img class="card-img-top" src="{{ site.url }}{{ project.img_src }}">
     {% endif %}
     <div class="card-body">
-      {% for tag in project.tags %}
+      {% for tag in pages.tags %}
         {% include tag_list.html %}
       {% endfor %}
       <h4><b><a data-toggle="collapse" class="stretched-link" href="#{{ project.id }}" role="button" aria-expanded="false"

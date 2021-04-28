@@ -1,0 +1,13 @@
+- name: Ahmedabad
+  id: amd 
+  img_src: /assets/img/ahmedabad.png
+  description_less: > 
+    <p>Click Here to Find Resources in Ahmedabad.</p> 
+  description_more: > 
+
+    <a href="#" target="beds/amd.html" class="btn btn-dark mb-1"><i class="fas fa-code-branch"></i> &nbsp Beds</a>
+    <a href="#" target="testing/amd.html" class="btn btn-dark mb-1"><i class="fas fa-align-right"></i> &nbsp Testing</a>
+    <a href="#" target="medishops/amd.html" class="btn btn-dark mb-1"<i class="fas fa-align-right"></i> &nbsp Medical Shops</a>
+
+  tags: [Ahmedabad, Gujarat]
+
