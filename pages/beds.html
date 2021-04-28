@@ -10,11 +10,12 @@ sitemap:
 <div class="col-sm-4">
   <img class="city-card-image" src="/assets/img/bed.svg" alt="Bed PNG" width="10" height="10">   
 </div>
-<h1>{{ page.city }}</h1>
+
 <div class="card mb-4">
   <div class="card-body">
       <div class="row">
           <div class="col-sm-8">
+            <h1>{{ page.id }}</h1>
             <table>
               {% for row in site.data.amd.beds %}
                 {% if forloop.first %}
