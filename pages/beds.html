@@ -16,8 +16,7 @@ sitemap:
       <div class="row">
           <div class="col-sm-8">
             <script>
-              var qs = new Querystring();
-              var city = qs.get("city");
+              var city = parent.document.URL.substring(parent.document.URL.indexOf('?'), parent.document.URL.length);
               alert(city)
             </script>
             <table>
