@@ -6,7 +6,7 @@
       {% for tag in pages.tags %}
         {% include tag_list.html %}
       {% endfor %}
-      <h4><b><a data-toggle="collapse" class="stretched-link" href="#{{ city.id }}" role="button" aria-expanded="false"
+      <h4><b><a data-toggle="collapse" class="stretched-link" href="/pages/beds.html?city={{ city.id }}" role="button" aria-expanded="false"
           aria-controls="collapseExample">{{ city.name }}</a></b></h4>
       <p>{{ city.description_less }}</p>
       <div class="collapse" id="{{ city.id }}">
